@@ -2,10 +2,10 @@ import { gql } from "@apollo/client";
 import { createAsyncThunk } from "@reduxjs/toolkit";
 import { apollo } from "../../config/apollo";
 
-export const getCharactersList = createAsyncThunk(
-    'characters/getCharactersList',
+export const getSidebarList = createAsyncThunk(
+    'sidebarList/getSidebarList',
     async (_, { rejectWithValue }) => {
-        const getCharactersQuery = gql`
+        const getSidebarQuery = gql`
        query {
             characters(page: 1) {
                 info {
@@ -21,7 +21,7 @@ export const getCharactersList = createAsyncThunk(
       `;
 
         try {
-            const response = await apollo.query({ query: getCharactersQuery });
+            const response = await apollo.query({ query: getSidebarQuery });
             return response.data.characters.results;
         } catch (e: any) {
             return rejectWithValue(e.message || 'Erro ao carregar a lista de personagens');

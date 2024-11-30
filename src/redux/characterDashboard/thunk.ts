@@ -3,30 +3,33 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { apollo } from "../../config/apollo";
 
 export const getCharacterDashboard = createAsyncThunk(
-    'characters/getCharacterDashboard',
-    async (characterName:string, { rejectWithValue }) => {
+    'character/getCharacterDashboard',
+    async (characterId: number) => {
 
         const getCharacterDashboard = gql`
        query {
-            characters(filter:{name: "${characterName}}) {
-            results {
+            character(id:${characterId}) {
                 id
                 name
                 image
+                species
+    			status
+    			gender
+    			origin {
+    			   name
+    			}
                 episode {
                  air_date
                 }
-            }
-    
             }
         }
       `;
 
         try {
             const response = await apollo.query({ query: getCharacterDashboard });
-            return response.data.characters.results;
+            return response.data.character;
         } catch (e: any) {
-            return rejectWithValue(e.message || 'Erro ao carregar a lista de personagens');
+            return e.message || 'Erro ao carregar os dados do personagem';
         }
     });
 

@@ -4,13 +4,16 @@ import { getCharacterDashboard } from "./thunk";
 const initialState = {
     data:[],
     loading:false,
-    error:null
+    error:null,
+    selectedCharacter:1
 }
 
-export const characterSlice = createSlice({
+export const characterDashboardSlice = createSlice({
     name: "characterDashboard",
     initialState: initialState,
-      reducers: {},
+      reducers: {
+       
+      },
       extraReducers: (builder) => {
         builder
           .addCase(getCharacterDashboard.pending, (state) => {

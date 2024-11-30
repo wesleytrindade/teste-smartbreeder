@@ -1,8 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
-import { characterSlice } from "./charactersList/slice";
+import { sidebarSlice } from "./sidebarList/slice";
+import { characterDashboardSlice } from "./characterDashboard/slice";
 
 export const store = configureStore({
     reducer:{
-        character: characterSlice.reducer
+        sidebarList: sidebarSlice.reducer,
+        charactersDashboard: characterDashboardSlice.reducer
+        
     }
 });
