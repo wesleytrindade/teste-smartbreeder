@@ -28,7 +28,7 @@ npm run dev
 ```
 ## 🛠️ Construído com
 
-* [Vite + ReactJS + Typescript](https://vite.dev/) - O framework Web e a linguagem de programção utilizada
+* [Vite + ReactJS + Typescript](https://vite.dev/) - O framework Web e a linguagem de programação utilizada
 * [Redux](https://redux-toolkit.js.org) - Biblioteca de gerenciamento de estado 
 * [Apollo](https://www.apollographql.com/) - Cliente GraphQL 
 * [Material UI](https://mui.com/material-ui/) - Biblioteca de interface gráfica
