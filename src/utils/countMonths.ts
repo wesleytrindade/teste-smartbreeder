@@ -1,3 +1,5 @@
+import { AxisData } from "../components/Graph";
+
 export interface Episode {
   air_date: string;
 }
@@ -23,7 +25,7 @@ export function countMonths(episodes: Episode[]){
     const monthCount = Object.entries(monthCountMap).map(([month, count]) => ({
       label: month,
       value: count.toString(),
-    })).sort((a, b) => monthOrder[a.label] - monthOrder[b.label]);
+    })).sort((a, b) => monthOrder[a.label] - monthOrder[b.label]) as AxisData[];
 
     return monthCount;
 

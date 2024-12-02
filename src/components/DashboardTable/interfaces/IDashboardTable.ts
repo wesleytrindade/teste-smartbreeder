@@ -2,7 +2,9 @@ export interface DashboardTableRow {
     status: string;
     species: string;
     gender: string;
-    origin: string;
+    origin:{
+        name:string;
+    }
 
 }
 

@@ -9,7 +9,6 @@ export function DashboardTable({ columns,rows }: DashboardTableProps) {
             border:0,
             borderRadius: '1%',
             overflow: 'auto',
-            maxHeight: { xs: 300, md: 500 },
             
         }}>
             <Table sx={{ borderColor: "gray.900", color: "white", width:"100%", }}>

@@ -68,7 +68,7 @@ export function Dashboard() {
 
                 </Grid2>
 
-                <Grid2 size={{ md: 2, xs: 12 }} sx={{ padding: "4rem" }}>
+                <Grid2 size={{ md: 2, xs: 12 }} marginTop={{xs:"3rem"}} paddingX= {{xs:"1rem",md:"1rem"}} paddingY={{xs:"0rem",md:"1rem"}}>
                     <DashboardAvatar themeColor={color} imageSrc={data.image} />
                 </Grid2>
 

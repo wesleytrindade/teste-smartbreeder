@@ -1,6 +1,6 @@
 
 import ReactECharts from 'echarts-for-react';
-import { countMonths } from "../../utils/countMonths";
+import { countMonths, Episode } from "../../utils/countMonths";
 import { useEffect, useState } from "react";
 import { CircularProgress, Grid2 } from "@mui/material";
 import { customColors } from '../../styles/customColors';
@@ -17,7 +17,7 @@ export interface GraphProps {
 }
 export function Graph(ep: GraphProps) {
 
-    const [formatedData, setFormatedData] = useState<any>(null);
+    const [formatedData, setFormatedData] = useState<AxisData[]>([]);
     const [loading, setLoading] = useState(true);
 
     const [labels, setLabels] = useState([]);
