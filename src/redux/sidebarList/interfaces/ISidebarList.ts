@@ -2,5 +2,5 @@ export interface SidebarList {
     data: [] | null; 
     loading: boolean;          
     error: string | null;
-    selectedCharacter:number;      
+    selectedCharacter:string;      
 }

@@ -1,16 +1,17 @@
 import { ListItemButton, ListItemText, Typography } from "@mui/material";
 import { customColors } from "../../styles/customColors";
+import { colorVariant } from "../../utils/colorVariant";
 
 interface SidebarItemProps {
     name: string;
-    variant?: string;
+    id:string;
     handleClick: () => void;
     selected:boolean;
 }
 
-export function SidebarItem({name, variant = "other", handleClick,selected=false }: SidebarItemProps) {
+export function SidebarItem({name, id, handleClick,selected=false }: SidebarItemProps) {
 
-    const variantColor = customColors[variant];
+    const color = colorVariant(id);
 
     return (
         <ListItemButton
@@ -18,8 +19,8 @@ export function SidebarItem({name, variant = "other", handleClick,selected=false
                 maxWidth:"310px",
                 maxHeight:"180px",
                 padding:"3rem",
-                color: "white" ,
-                background:selected ? variantColor:"#3A3A3A",
+                color: selected ? `${customColors[`text_${color}`]}`:"white",
+                backgroundColor:selected ? `${customColors[color]} !important`:"#3A3A3A",
                 cursor: "pointer",
                 textAlign: "center",
             }} onClick={handleClick} selected={selected}>

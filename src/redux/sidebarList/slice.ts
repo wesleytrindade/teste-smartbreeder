@@ -4,9 +4,9 @@ import { SidebarList } from "./interfaces/ISidebarList";
 
 const initialState = {
   data: [],
-  loading: false,
-  error: null,
-  selectedCharacter: 1,
+  loading: true,
+  error: "",
+  selectedCharacter: "1",
 } as SidebarList;
 
 export const sidebarSlice = createSlice({
@@ -27,9 +27,9 @@ export const sidebarSlice = createSlice({
         state.loading = false;
         state.data = action.payload;
       })
-      .addCase(getSidebarList.rejected, (state, action) => {
+      .addCase(getSidebarList.rejected, (state) => {
         state.loading = false;
-        state.error = action.payload || 'Erro ao carregar os personagens';
+        state.error = "Erro ao carregar os personagens";
       });
   },
 })

@@ -1,50 +1,37 @@
-# React + TypeScript + Vite
+# PROJETO - DASHBOARD DO RICK AND MORTY
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
-
-Currently, two official plugins are available:
-
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
-
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+Este é um dashboard simples que consome dados da API do Rick and Morty e exibe informações sobre os personagens
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Como clonar o repositório
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+Abra o prompt do Git e execute o seguinte comando:
 ```
+
+```bash
+
+git clone https://github.com/wesleytrindade/teste-smartbreeder.git
+```
+## Como instalar as dependências
+
+Execute o seguinte comando para instalar todas as dependências necessárias:
+
+
+```bash
+npm install
+```
+
+## Como rodar o projeto
+
+Execute o seguinte comando para rodar o projeto
+
+```bash
+npm run dev
+```
+## 🛠️ Construído com
+
+* [Vite + ReactJS + Typescript](https://vite.dev/) - O framework Web e a linguagem de programção utilizada
+* [Redux](https://redux-toolkit.js.org) - Biblioteca de gerenciamento de estado 
+* [Apollo](https://www.apollographql.com/) - Cliente GraphQL 
+* [Material UI](https://mui.com/material-ui/) - Biblioteca de interface gráfica
+* [Echarts](https://echarts.apache.org) - Biblioteca de criação de gráficos

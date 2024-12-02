@@ -1,8 +1,10 @@
 import { Avatar, Box } from "@mui/material";
 import { customColors } from "../../styles/customColors";
 
+type CustomColorKeys = keyof typeof customColors;
+
 interface AvatarProps {
-    themeColor?: string;
+    themeColor?: CustomColorKeys;
     imageSrc: string;
 }
 export function DashboardAvatar({ themeColor = "other", imageSrc }: AvatarProps) {
@@ -13,11 +15,10 @@ export function DashboardAvatar({ themeColor = "other", imageSrc }: AvatarProps)
 
         }}
     >
-
         <Avatar alt="image" src={imageSrc} sx={{
             width: "100%",
             height: "100%",
-            border: `2px solid ${customColors[themeColor]}`
+            border: `4px solid ${customColors[themeColor]}`
 
         }} />
     </Box>)

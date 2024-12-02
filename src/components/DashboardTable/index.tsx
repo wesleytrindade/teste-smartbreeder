@@ -1,38 +1,18 @@
-import { Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import {Table, TableBody, TableCell, TableContainer, TableHead, TableRow } from "@mui/material";
+import { DashboardTableProps } from "./interfaces/IDashboardTable";
 
 
-interface DashboardTableRow {
-    status: string;
-    species: string;
-    gender: string;
-    origin: string;
-
-}
-
-interface DashboardTableColumns {
-    field: string;
-}
-interface DashboardTableProps {
-    rows: DashboardTableRow[];
-}
-
-
-export function DashboardTable({ rows }: any) {
-
-    const columns = [
-        { field: 'Status', },
-        { field: 'Species' },
-        { field: 'Gender', },
-        { field: 'Origin', },
-    ] as DashboardTableColumns[];
+export function DashboardTable({ columns,rows }: DashboardTableProps) {
 
     return (
         <TableContainer sx={{
             border:0,
             borderRadius: '1%',
-            overflow: 'hidden'
+            overflow: 'auto',
+            maxHeight: { xs: 300, md: 500 },
+            
         }}>
-            <Table sx={{ borderColor: "gray.900", color: "white", minWidth: 650 }}>
+            <Table sx={{ borderColor: "gray.900", color: "white", width:"100%", }}>
                 <TableHead>
                     <TableRow sx={{
                         background: "#4C4C4C",
