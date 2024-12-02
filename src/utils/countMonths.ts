@@ -31,8 +31,6 @@ export function countMonths(episodes: Episode[]){
 
   }
   else {
-    return {
-      data: []
-    } 
+    return [] as AxisData[]; 
   }
 }

@@ -1,4 +1,4 @@
-import { Avatar, Box, Grid2 } from "@mui/material";
+import { Avatar, Grid2 } from "@mui/material";
 import { customColors } from "../../styles/customColors";
 
 type CustomColorKeys = keyof typeof customColors;

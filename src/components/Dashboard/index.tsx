@@ -1,7 +1,7 @@
 import { Grid2, Stack, Typography, LinearProgress } from "@mui/material";
 import { useDashboard } from "../../hooks/useDashboard";
 import { customColors } from "../../styles/customColors";
-import { DashboardAvatar } from "../Avatar";
+import { DashboardAvatar } from "../DashboardAvatar";
 import { DashboardTable } from "../DashboardTable";
 import { Graph } from "../Graph";
 import { useEffect, useState } from "react";

@@ -18,8 +18,8 @@ export function DashboardTable({ columns,rows }: DashboardTableProps) {
                         '&:last-child td, &:last-child th': { border: 0 }
                     }} >
 
-                        {columns.map((c) =>
-                            <TableCell sx={{ color: "white", fontWeight: 600, fontSize: "1rem" }} align="center">{c.field}</TableCell>
+                        {columns.map((c,i) =>
+                            <TableCell key={i} sx={{ color: "white", fontWeight: 600, fontSize: "1rem" }} align="center">{c.field}</TableCell>
                         )}
                     </TableRow>
                 </TableHead>

@@ -12,7 +12,7 @@ export interface AxisData {
     value: string;
 }
 export interface GraphProps {
-    data: AxisData[],
+    data: Episode[],
     color: CustomColorKeys;
 }
 export function Graph(ep: GraphProps) {
@@ -20,8 +20,8 @@ export function Graph(ep: GraphProps) {
     const [formatedData, setFormatedData] = useState<AxisData[]>([]);
     const [loading, setLoading] = useState(true);
 
-    const [labels, setLabels] = useState([]);
-    const [graphValues, setGraphValues] = useState([]);
+    const [labels, setLabels] = useState<string[]>([]);
+    const [graphValues, setGraphValues] = useState<number[]>([]);
 
     useEffect(() => {
         if (ep && ep.data.length > 0) {
@@ -29,13 +29,13 @@ export function Graph(ep: GraphProps) {
 
             setFormatedData(months);
 
-            const labelsMap = months.map((m: any) => {
+            const labelsMap = months.map((m) => {
                 return m.label;
             });
 
             setLabels(labelsMap);
 
-            const valuesMap = months.map((m: any) => {
+            const valuesMap = months.map((m) => {
                 return parseInt(m.value);
             });
 
