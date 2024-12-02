@@ -1,18 +1,16 @@
 # PROJETO - DASHBOARD DO RICK AND MORTY
 
 Este é um dashboard simples que consome dados da API do Rick and Morty e exibe informações sobre os personagens
-```
 
-## Como clonar o repositório
+## 🚀 Como clonar o repositório
 
 Abra o prompt do Git e execute o seguinte comando:
-```
 
 ```bash
 
 git clone https://github.com/wesleytrindade/teste-smartbreeder.git
 ```
-## Como instalar as dependências
+## 🔧 Como instalar as dependências
 
 Execute o seguinte comando para instalar todas as dependências necessárias:
 
@@ -21,7 +19,7 @@ Execute o seguinte comando para instalar todas as dependências necessárias:
 npm install
 ```
 
-## Como rodar o projeto
+## ⚙️ Como rodar o projeto
 
 Execute o seguinte comando para rodar o projeto
 
